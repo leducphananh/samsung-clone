@@ -1,3 +1,4 @@
+import FeatureCard from './components/FeatureCard';
 import Header from './components/Header';
 import HelpMeChoose from './components/HelpMeChoose';
 import OfferCard from './components/OfferCard';
@@ -14,6 +15,7 @@ export default function Home() {
       <OfferCard />
       <RecommendProduct />
       <HelpMeChoose />
+      <FeatureCard />
     </>
   );
 }
