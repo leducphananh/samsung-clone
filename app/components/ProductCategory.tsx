@@ -2,6 +2,7 @@
 import clsx from 'clsx';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { useRef, useState } from 'react';
 import type { Swiper as SwiperType } from 'swiper';
 import 'swiper/css';
@@ -65,13 +66,15 @@ const ProductCategory = () => {
                     {product.title}
                   </h3>
                   <div className="px-4">
-                    <Image
-                      width={88}
-                      height={88}
-                      src={product.imageSrc}
-                      alt={product.title}
-                      className="w-full object-contain"
-                    />
+                    <Link href="#" className="flex items-center justify-center">
+                      <Image
+                        width={88}
+                        height={88}
+                        src={product.imageSrc}
+                        alt={product.title}
+                        className="h-22 w-22 object-contain transition-transform duration-500 ease-[cubic-bezier(0.35,0,0.36,1)] hover:scale-110 md:h-50 md:w-50"
+                      />
+                    </Link>
                   </div>
                   {product.options && (
                     <div className="mt-4 flex items-center justify-center gap-4 text-sm font-semibold text-[#6d6d6d]">

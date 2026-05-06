@@ -1,4 +1,8 @@
-export const offers = [
+export const offers: {
+  id: number;
+  title: string;
+  items: { id: number; title: string; description?: string; imgSrc: string }[];
+}[] = [
   {
     id: 1,
     title: 'Ngày của Mẹ',
