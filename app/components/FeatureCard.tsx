@@ -25,7 +25,7 @@ const FeatureCard = () => {
               640: { slidesPerView: 3, spaceBetween: 20 },
             }}>
             {features.map(item => (
-              <SwiperSlide key={item.id} className="h-auto">
+              <SwiperSlide key={item.id} className="h-auto!">
                 <Link
                   href="#"
                   className="flex items-center justify-center overflow-hidden rounded-[20px] border border-[#ddd]">

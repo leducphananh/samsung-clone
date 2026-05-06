@@ -50,7 +50,7 @@ const OfferCard = () => {
               640: { slidesPerView: 4, spaceBetween: 20 },
             }}>
             {selectedOfferItems.map(item => (
-              <SwiperSlide key={item.id} className="h-auto">
+              <SwiperSlide key={item.id} className="h-auto!">
                 <div className="group flex h-45 items-center justify-center overflow-hidden rounded-lg bg-[#f7f7f7] md:h-85.5">
                   <Link
                     href="#"

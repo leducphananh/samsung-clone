@@ -26,7 +26,7 @@ const HelpMeChoose = () => {
               1024: { slidesPerView: 4, spaceBetween: 24 },
             }}>
             {helpChoose.map(item => (
-              <SwiperSlide key={item.id} className="h-auto">
+              <SwiperSlide key={item.id} className="h-auto!">
                 <div className="help-choose-card flex min-h-110 w-full justify-center overflow-hidden rounded-[20px]">
                   <div className="relative z-1 w-full flex-1">
                     <div className="p-8 pt-7.5">

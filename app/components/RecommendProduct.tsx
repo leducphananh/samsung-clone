@@ -39,7 +39,7 @@ const RecommendProduct = () => {
               1280: { slidesPerView: 4.2, spaceBetween: 24 },
             }}>
             {recommendProducts.map(item => (
-              <SwiperSlide key={item.id} className="h-auto">
+              <SwiperSlide key={item.id} className="h-auto!">
                 <div className="group flex h-45 items-center justify-center overflow-hidden rounded-lg bg-[#f7f7f7] md:h-85.5">
                   <Link
                     href="#"

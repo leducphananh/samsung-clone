@@ -42,7 +42,7 @@ const ReasonToBuy = () => {
               1280: { slidesPerView: 4.2, spaceBetween: 24 },
             }}>
             {reasons.map(reason => (
-              <SwiperSlide key={reason.id} className="h-auto">
+              <SwiperSlide key={reason.id} className="h-auto!">
                 <article className="rounded-lg border border-[#e5e5e5] bg-white p-8">
                   <div className="flex size-12 items-center justify-center rounded-lg bg-[#f5f7fe] md:size-16">
                     <reason.icon className="size-6 md:size-9" />
