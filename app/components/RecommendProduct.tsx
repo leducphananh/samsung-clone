@@ -1,5 +1,6 @@
 'use client';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
+import Image from 'next/image';
 import Link from 'next/link';
 import { useRef, useState } from 'react';
 import type { Swiper as SwiperType } from 'swiper';
@@ -8,22 +9,18 @@ import 'swiper/css/navigation';
 import 'swiper/css/scrollbar';
 import { Navigation, Scrollbar } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { reasons } from '../constants/reason.constant';
+import { recommendProducts } from '../constants/recommend.constant';
+import { formatVnd } from '../utils/format.util';
 
-const ReasonToBuy = () => {
+const RecommendProduct = () => {
   const [swiperProgress, setSwiperProgress] = useState(0);
   const swiperRef = useRef<SwiperType | null>(null);
 
   return (
     <section className="mx-auto w-full max-w-360 pt-9 pb-10 md:py-15">
-      <div className="flex items-center justify-between px-6">
-        <h2 className="font-samsung-sharp text-[24px] font-bold md:text-[40px]">
-          Mua trực tiếp Nhận ngay ưu đãi
-        </h2>
-        <button className="hidden cursor-pointer rounded-[20px] border border-black px-6 py-2.5 font-bold text-black transition-all duration-200 hover:bg-black hover:text-white md:block">
-          Tìm hiểu thêm
-        </button>
-      </div>
+      <h2 className="font-samsung-sharp mb-1.5 px-6 text-[24px] font-bold md:mb-5.5 md:text-[40px]">
+        Được đề xuất cho bạn
+      </h2>
 
       <div className="mt-7 md:mt-11.5">
         <div className="mx-auto max-w-360 px-6">
@@ -41,24 +38,39 @@ const ReasonToBuy = () => {
               1024: { slidesPerView: 3.1, spaceBetween: 24 },
               1280: { slidesPerView: 4.2, spaceBetween: 24 },
             }}>
-            {reasons.map(reason => (
-              <SwiperSlide key={reason.id} className="h-auto">
-                <article className="rounded-lg border border-[#e5e5e5] bg-white p-8">
-                  <div className="flex size-12 items-center justify-center rounded-lg bg-[#f5f7fe] md:size-16">
-                    <reason.icon className="size-6 md:size-9" />
-                  </div>
-                  <p className="font-samsung-sharp mt-5 text-[18px] font-bold md:text-[22px]">
-                    {reason.title}
-                  </p>
-                  <p className="mt-3 mb-8 text-[14px] md:text-[16px]">
-                    {reason.description}
-                  </p>
+            {recommendProducts.map(item => (
+              <SwiperSlide key={item.id} className="h-auto">
+                <div className="group flex h-45 items-center justify-center overflow-hidden rounded-lg bg-[#f7f7f7] md:h-85.5">
                   <Link
-                    href={reason.href}
-                    className="mt-8 text-[16px] font-bold underline">
-                    Tìm hiểu thêm
+                    href="#"
+                    className="flex h-full w-full items-center justify-center">
+                    <Image
+                      width={216}
+                      height={216}
+                      src={item.imgSrc}
+                      alt={item.title}
+                      className="h-29 w-29 transition-transform duration-500 ease-[cubic-bezier(0.35,0,0.36,1)] group-hover:scale-110 md:h-54 md:w-54"
+                    />
                   </Link>
-                </article>
+                </div>
+                <Link href="#">
+                  <p className="mt-6 text-[18px] font-bold md:text-[22px]">
+                    {item.title}
+                  </p>
+                </Link>
+                <div className="mt-6 md:mt-8">
+                  <strong className="text-[16px] font-bold md:text-[20px]">
+                    {formatVnd(item.price)}
+                  </strong>
+                  <p className="text-[14px] font-bold text-[#006bea] md:text-[16px]">
+                    chiết khấu {formatVnd(item.originalPrice - item.price)} (giá
+                    gốc{' '}
+                    <del className="font-normal text-[#717171] no-underline">
+                      {formatVnd(item.originalPrice)}
+                    </del>
+                    )
+                  </p>
+                </div>
               </SwiperSlide>
             ))}
           </Swiper>
@@ -91,14 +103,8 @@ const ReasonToBuy = () => {
           </div>
         </div>
       </div>
-
-      <div className="mt-6 flex justify-center md:hidden">
-        <button className="cursor-pointer rounded-[20px] border border-black px-6 py-2.5 font-bold text-black transition-all duration-200 hover:bg-black hover:text-white">
-          Tìm hiểu thêm
-        </button>
-      </div>
     </section>
   );
 };
 
-export default ReasonToBuy;
+export default RecommendProduct;

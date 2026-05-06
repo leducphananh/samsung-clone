@@ -16,7 +16,7 @@ const OfferCard = () => {
     offers.find(o => o.id === selectedOffer)?.items || [];
 
   return (
-    <section className="mx-auto w-full max-w-360 py-15">
+    <section className="mx-auto w-full max-w-360 pt-9 pb-10 md:py-15">
       <h2 className="font-samsung-sharp mb-1.5 px-6 text-[24px] font-bold md:mb-5.5 md:text-[40px]">
         Ưu đãi mới nhất
       </h2>
