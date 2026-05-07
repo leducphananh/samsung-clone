@@ -6,7 +6,7 @@ import Link from 'next/link';
 import { useCallback, useEffect, useRef, useState } from 'react';
 
 const DesktopNav = () => {
-  const [activeId, setActiveId] = useState<number | null>(1);
+  const [activeId, setActiveId] = useState<number | null>(null);
   const leaveTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const handleMouseEnter = useCallback((id: number) => {
