@@ -1,5 +1,5 @@
 import FeatureCard from './components/FeatureCard';
-import Header from './components/Header';
+import Header from './components/header/header';
 import HelpMeChoose from './components/HelpMeChoose';
 import OfferCard from './components/OfferCard';
 import ProductCategory from './components/ProductCategory';
