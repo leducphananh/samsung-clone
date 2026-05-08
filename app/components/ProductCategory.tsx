@@ -82,8 +82,8 @@ const ProductCategory = () => {
                           href={`/smartphones/${product.title}`}
                           className="flex items-center justify-center">
                           <Image
-                            width={88}
-                            height={88}
+                            width={200}
+                            height={200}
                             src={product.imageSrc}
                             alt={product.title}
                             className="h-22 w-22 object-contain transition-transform duration-500 ease-[cubic-bezier(0.35,0,0.36,1)] hover:scale-110 md:h-50 md:w-50"
