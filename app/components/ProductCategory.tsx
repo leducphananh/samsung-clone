@@ -23,7 +23,6 @@ const ProductCategory = () => {
 
   return (
     <section className="mt-8">
-      16:32
       <h1 className="font-sharp mx-auto mb-3 max-w-360 px-6 text-2xl font-bold md:mb-11 md:text-[40px]">
         Lựa chọn tối ưu chuẩn sống của bạn
       </h1>
