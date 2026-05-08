@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import localFont from 'next/font/local';
+import Header from './components/header/header';
 import './globals.css';
 
 const samsungOneFont = localFont({
@@ -45,7 +46,10 @@ export default function RootLayout({
     <html
       lang="en"
       className={`${samsungOneFont.variable} ${samsungSharpSansFont.variable} h-full antialiased`}>
-      <body className="flex min-h-full flex-col">{children}</body>
+      <body className="flex min-h-full flex-col">
+        <Header />
+        {children}
+      </body>
     </html>
   );
 }

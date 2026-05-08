@@ -32,7 +32,7 @@ const ProductCategory = () => {
             <li key={category.id} className={clsx('min-h-21.5 px-1')}>
               <button
                 className={clsx(
-                  'w-21 cursor-pointer rounded-lg border-2 border-[#ddd] px-0.5 pt-3 pb-1.5 md:h-30 md:w-30',
+                  'w-21 cursor-pointer rounded-lg border border-[#ddd] px-0.5 pt-3 pb-1.5 md:h-30 md:w-30',
                   activeCategory === category.id && 'border-black',
                 )}
                 onClick={() => {
@@ -40,7 +40,10 @@ const ProductCategory = () => {
                   setSwiperProgress(0);
                   swiperRef.current?.slideTo(0);
                 }}>
-                <category.icon className="mx-auto size-6 md:size-12" />
+                <category.icon
+                  className="mx-auto size-6 md:size-12"
+                  strokeWidth={1}
+                />
                 <span className="mt-1 flex h-10 items-center justify-center text-xs leading-snug font-bold">
                   {category.name}
                 </span>
@@ -76,7 +79,7 @@ const ProductCategory = () => {
                       </h3>
                       <div className="px-4">
                         <Link
-                          href="#"
+                          href={`/smartphones/${product.title}`}
                           className="flex items-center justify-center">
                           <Image
                             width={88}

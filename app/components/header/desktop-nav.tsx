@@ -7,19 +7,43 @@ import { useCallback, useEffect, useRef, useState } from 'react';
 
 const DesktopNav = () => {
   const [activeId, setActiveId] = useState<number | null>(null);
+  const enterTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const leaveTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
-  const handleMouseEnter = useCallback((id: number) => {
-    if (leaveTimerRef.current) {
-      clearTimeout(leaveTimerRef.current);
-      leaveTimerRef.current = null;
+  const clearEnterTimer = useCallback(() => {
+    if (enterTimerRef.current) {
+      clearTimeout(enterTimerRef.current);
+      enterTimerRef.current = null;
     }
-    setActiveId(id);
   }, []);
 
+  const handleMouseEnter = useCallback(
+    (id: number, delayMs = 150) => {
+      if (leaveTimerRef.current) {
+        clearTimeout(leaveTimerRef.current);
+        leaveTimerRef.current = null;
+      }
+
+      if (activeId === id) {
+        clearEnterTimer();
+        return;
+      }
+
+      clearEnterTimer();
+      if (delayMs <= 0) {
+        setActiveId(id);
+        return;
+      }
+
+      enterTimerRef.current = setTimeout(() => setActiveId(id), delayMs);
+    },
+    [activeId, clearEnterTimer],
+  );
+
   const handleMouseLeave = useCallback(() => {
+    clearEnterTimer();
     leaveTimerRef.current = setTimeout(() => setActiveId(null), 120);
-  }, []);
+  }, [clearEnterTimer]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -29,8 +53,12 @@ const DesktopNav = () => {
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => {
       window.removeEventListener('scroll', handleScroll);
+      clearEnterTimer();
+      if (leaveTimerRef.current) {
+        clearTimeout(leaveTimerRef.current);
+      }
     };
-  }, []);
+  }, [clearEnterTimer]);
 
   return (
     <div className="relative hidden lg:block" onMouseLeave={handleMouseLeave}>
@@ -48,7 +76,9 @@ const DesktopNav = () => {
                 role="none"
                 className="relative"
                 onMouseEnter={() =>
-                  hasMegamenu ? handleMouseEnter(item.id) : setActiveId(null)
+                  hasMegamenu
+                    ? handleMouseEnter(item.id, 200)
+                    : setActiveId(null)
                 }>
                 {/* Level-0 nav link */}
                 <Link
@@ -74,7 +104,7 @@ const DesktopNav = () => {
                   <div
                     role="region"
                     aria-label={`${item.name} submenu`}
-                    onMouseEnter={() => handleMouseEnter(item.id)}
+                    onMouseEnter={() => handleMouseEnter(item.id, 0)}
                     className={clsx(
                       'fixed top-26.5 right-0 left-0 z-40 transition-[opacity,transform,visibility] duration-200 ease-out',
                       isActive
