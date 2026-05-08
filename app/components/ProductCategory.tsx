@@ -23,6 +23,7 @@ const ProductCategory = () => {
 
   return (
     <section className="mt-8">
+      16:32
       <h1 className="font-sharp mx-auto mb-3 max-w-360 px-6 text-2xl font-bold md:mb-11 md:text-[40px]">
         Lựa chọn tối ưu chuẩn sống của bạn
       </h1>
@@ -52,7 +53,6 @@ const ProductCategory = () => {
           ))}
         </ul>
       </div>
-
       <div className="bg-[#f7f7f7] pt-6 pb-10">
         <div className="mx-auto max-w-360 px-6">
           {activeCategoryItems.length > 0 ? (
