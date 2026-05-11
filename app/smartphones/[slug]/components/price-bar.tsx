@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 const PriceBar = () => {
   return (
-    <section className="mx-auto hidden w-full max-w-360 items-center justify-between px-6 py-4 md:flex">
+    <section className="sticky top-0 z-20 mx-auto hidden w-full max-w-360 items-center justify-between bg-white px-6 py-4 md:flex">
       <div>
         <p className="mb-1 text-[12px] text-[#006bea]">Mới ra mắt</p>
         <Link href="#" className="font-samsung-sharp text-[24px] font-bold">

@@ -16,7 +16,7 @@ const InnerCrossNav = () => {
   };
 
   return (
-    <section className="border-b border-[#ddd]">
+    <section className="sticky top-0 z-20 border-b border-[#ddd] bg-white md:top-22.5">
       <div className="mx-auto w-full max-w-360">
         <div className="relative mx-3 flex items-center">
           <button
