@@ -3,6 +3,7 @@ import {
   tradeInfoCards,
   tradeOptions,
 } from '@/app/constants/product-trade.constant';
+import clsx from 'clsx';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
@@ -37,11 +38,12 @@ const ProductTrade = () => {
               <li key={option.id} className="col-span-1">
                 <button
                   type="button"
-                  className={`flex h-full w-full cursor-pointer items-center justify-between rounded-[5px] border p-4 md:p-5.5 ${
+                  className={clsx(
+                    'flex h-full w-full cursor-pointer items-center justify-between rounded-[5px] border p-4 md:p-5.5',
                     isSelected
-                      ? 'border-2 border-[#006bea]'
-                      : 'border-[#ddd] hover:border-[#555]'
-                  }`}
+                      ? 'border-[#006bea] ring-1 ring-[#006bea] ring-inset'
+                      : 'border-[#ddd] hover:border-[#555]',
+                  )}
                   onClick={() => setSelectedOptionId(option.id)}>
                   <div className="text-[16px] font-bold md:text-[18px]">
                     {option.label}

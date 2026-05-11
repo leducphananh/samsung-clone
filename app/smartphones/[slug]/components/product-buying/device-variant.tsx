@@ -32,10 +32,10 @@ const DeviceVariant = ({ activeDevice, setActiveDevice }: Props) => {
             <li key={variant.id}>
               <div
                 className={clsx(
-                  'rounded-md border border-[#ddd]',
+                  'rounded-md border',
                   activeDevice === variant.id
-                    ? 'border-2 border-[#2189ff]!'
-                    : 'hover:border-[#555]',
+                    ? 'border-[#2189ff] ring-1 ring-[#2189ff] ring-inset'
+                    : 'border-[#ddd] hover:border-[#555]',
                 )}>
                 <button
                   className="flex w-full cursor-pointer items-center justify-between gap-1.5 px-5 py-3.5"
