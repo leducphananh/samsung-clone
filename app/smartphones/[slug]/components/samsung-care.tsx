@@ -54,13 +54,13 @@ const SamsungCare = () => {
                     setSelectedCareOption(null);
                   }}
                   className={clsx(
-                    'flex h-full cursor-pointer rounded-[5px] border p-4 md:p-6',
-                    isSimple ? 'w-full items-center' : 'flex-col',
+                    'flex h-full w-full cursor-pointer rounded-[5px] border p-4 md:p-6',
+                    isSimple ? 'items-center' : 'flex-col',
                     isSelected
                       ? 'border-[#006bea] ring-1 ring-[#2189ff] ring-inset'
                       : 'border-[#ddd] hover:border-[#555]',
                   )}>
-                  <div className={clsx(isSimple ? '' : 'h-12.5 space-y-1')}>
+                  <div className={clsx(isSimple ? '' : 'space-y-1')}>
                     <p className="text-left text-[16px] font-bold md:text-[18px]">
                       {option.title}
                     </p>
