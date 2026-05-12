@@ -43,6 +43,40 @@ body {
     var(--font-samsung-one), var(--font-samsung-sharp), Helvetica, sans-serif;
 }
 
+.promotion-coupon-scrollbar {
+  position: relative;
+  height: 3px;
+  border-radius: 999px;
+  background: #8f8f8f;
+  display: flex;
+  align-items: center;
+}
+
+.promotion-coupon-scrollbar::before {
+  content: '';
+  position: absolute;
+  inset: -6px 0;
+  cursor: pointer;
+}
+
+.promotion-coupon-scrollbar .swiper-scrollbar-drag {
+  height: 4px;
+  border-radius: 999px;
+  background: #313131;
+  transition: height 0.2s ease;
+  cursor: pointer;
+}
+
+.promotion-coupon-scrollbar .swiper-scrollbar-drag:hover {
+  height: 5px;
+}
+
+.promotion-coupon-scrollbar .swiper-scrollbar-drag.swiper-scrollbar-dragging,
+.promotion-coupon-scrollbar:active .swiper-scrollbar-drag {
+  height: 5px;
+  cursor: pointer;
+}
+
 .help-choose-card:has(.help-choose-link:hover) .help-choose-image {
   transform: scale(1.1);
 }
