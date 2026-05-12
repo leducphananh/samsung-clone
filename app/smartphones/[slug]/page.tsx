@@ -3,6 +3,7 @@ import InnerCrossNav from './components/inner-cross-nav';
 import OfferBanner from './components/offer-banner';
 import PriceBar from './components/price-bar';
 import ProductBuying from './components/product-buying/product-buying';
+import ProductSummary from './components/product-summary';
 import ProductTrade from './components/product-trade';
 import SamsungCare from './components/samsung-care';
 
@@ -16,6 +17,7 @@ const SmartphoneDetailPage = () => {
       <ProductBuying />
       <ProductTrade />
       <SamsungCare />
+      <ProductSummary />
     </>
   );
 };
