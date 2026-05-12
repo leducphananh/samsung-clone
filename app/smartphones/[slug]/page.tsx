@@ -5,6 +5,7 @@ import PriceBar from './components/price-bar';
 import ProductBuying from './components/product-buying/product-buying';
 import ProductSummary from './components/product-summary';
 import ProductTrade from './components/product-trade';
+import PromotionGift from './components/promotion-gift';
 import SamsungCare from './components/samsung-care';
 
 const SmartphoneDetailPage = () => {
@@ -18,6 +19,7 @@ const SmartphoneDetailPage = () => {
       <ProductTrade />
       <SamsungCare />
       <ProductSummary />
+      <PromotionGift />
     </>
   );
 };
