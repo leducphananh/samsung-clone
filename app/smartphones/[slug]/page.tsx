@@ -3,6 +3,7 @@ import InnerCrossNav from './components/inner-cross-nav';
 import OfferBanner from './components/offer-banner';
 import PriceBar from './components/price-bar';
 import ProductBuying from './components/product-buying/product-buying';
+import ProductFeature from './components/product-feature/product-feature';
 import ProductSummary from './components/product-summary';
 import ProductTrade from './components/product-trade';
 import PromotionCoupon from './components/promotion-coupon';
@@ -22,6 +23,7 @@ const SmartphoneDetailPage = () => {
       <PromotionCoupon />
       <ProductSummary />
       <PromotionGift />
+      <ProductFeature />
     </>
   );
 };

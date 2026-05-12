@@ -1,18 +1,17 @@
 'use client';
-
 import { promotionCoupons } from '@/app/constants/promotion-coupon.constant';
 import clsx from 'clsx';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
 import type { Swiper as SwiperType } from 'swiper';
-import { Navigation, Scrollbar } from 'swiper/modules';
-import { Swiper, SwiperSlide } from 'swiper/react';
-
-import { ChevronLeft, ChevronRight } from 'lucide-react';
 import 'swiper/css';
+import 'swiper/css/free-mode';
 import 'swiper/css/navigation';
 import 'swiper/css/scrollbar';
+import { FreeMode, Navigation, Scrollbar } from 'swiper/modules';
+import { Swiper, SwiperSlide } from 'swiper/react';
 
 const PromotionCoupon = () => {
   const [navState, setNavState] = useState({ left: false, right: true });
@@ -33,7 +32,7 @@ const PromotionCoupon = () => {
         <div className="mt-5 mb-7 md:mt-6 md:mb-12">
           <div className="relative">
             <Swiper
-              modules={[Navigation, Scrollbar]}
+              modules={[FreeMode, Navigation, Scrollbar]}
               navigation={{
                 prevEl: '.promotion-coupon-prev',
                 nextEl: '.promotion-coupon-next',
@@ -41,6 +40,9 @@ const PromotionCoupon = () => {
               scrollbar={{
                 el: '.promotion-coupon-scrollbar',
                 draggable: true,
+              }}
+              freeMode={{
+                minimumVelocity: 5,
               }}
               onSwiper={syncNavState}
               onSlideChange={syncNavState}

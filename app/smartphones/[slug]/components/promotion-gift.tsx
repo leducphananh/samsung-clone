@@ -38,13 +38,15 @@ const PromotionGift = () => {
                     </div>
                   )}
                 </div>
-                <Image
-                  src={gift.iconSrc}
-                  alt={gift.title}
-                  width={80}
-                  height={80}
-                  className="h-16.5 w-16.5 shrink-0 md:h-20 md:w-20"
-                />
+                <div className="shrink-0">
+                  <Image
+                    src={gift.iconSrc}
+                    alt={gift.title}
+                    width={80}
+                    height={80}
+                    className="h-16.5 w-16.5 md:h-20 md:w-20"
+                  />
+                </div>
               </li>
             ))}
           </ul>
