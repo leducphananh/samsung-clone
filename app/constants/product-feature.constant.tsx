@@ -6,6 +6,7 @@ export const featureSections: {
   id: number;
   label: string;
   content: React.ReactNode;
+  anchorId?: string;
 }[] = [
   {
     id: 1,
@@ -20,6 +21,7 @@ export const featureSections: {
   {
     id: 3,
     label: 'So sánh các dòng điện thoại',
+    anchorId: 'compare-products',
     content: <CompareProduct />,
   },
   {

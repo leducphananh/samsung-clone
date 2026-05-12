@@ -78,8 +78,9 @@ const ProductCard = ({
               <button
                 key={variant.id}
                 onClick={() => setSelectedVariant(variant)}
+                style={{ backgroundColor: variant.hex }}
                 className={clsx(
-                  `relative h-5 w-5 rounded-full border border-[#00000080] bg-[${variant.hex}] cursor-pointer`,
+                  'relative h-5 w-5 cursor-pointer rounded-full border border-[#00000080]',
                   selectedVariant === variant &&
                     'after:absolute after:-inset-1 after:rounded-full after:border-2 after:border-[#0c71e5] after:content-[""]',
                 )}
@@ -104,8 +105,9 @@ const ProductCard = ({
                 <button
                   key={variant.id}
                   onClick={() => setSelectedVariant(variant)}
+                  style={{ backgroundColor: variant.hex }}
                   className={clsx(
-                    `relative h-5 w-5 rounded-full border border-[#00000080] bg-[${variant.hex}] cursor-pointer`,
+                    'relative h-5 w-5 cursor-pointer rounded-full border border-[#00000080]',
                     selectedVariant === variant &&
                       'after:absolute after:-inset-1 after:rounded-full after:border-2 after:border-[#0c71e5] after:content-[""]',
                   )}

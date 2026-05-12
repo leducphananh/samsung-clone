@@ -50,7 +50,30 @@ const InnerCrossNav = () => {
             </SwiperSlide>
             <SwiperSlide tag="li" className="w-auto! pt-0.5">
               <Link
-                href="#"
+                href="#compare-products"
+                onClick={event => {
+                  event.preventDefault();
+                  const anchorId = 'compare-products';
+                  const anchorHash = `#${anchorId}`;
+
+                  window.dispatchEvent(
+                    new CustomEvent('product-feature:open', {
+                      detail: { anchorId },
+                    }),
+                  );
+
+                  if (window.location.hash !== anchorHash) {
+                    window.location.hash = anchorId;
+                  }
+
+                  const target = document.getElementById(anchorId);
+                  if (target) {
+                    target.scrollIntoView({
+                      behavior: 'smooth',
+                      block: 'start',
+                    });
+                  }
+                }}
                 className="inline-flex h-11 items-center px-3 text-[14px] md:text-[16px]">
                 So sánh các dòng sản phẩm
               </Link>

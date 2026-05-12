@@ -2,7 +2,7 @@
 import { featureSections } from '@/app/constants/product-feature.constant';
 import clsx from 'clsx';
 import { ChevronDown } from 'lucide-react';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 const ProductFeature = () => {
   return (
@@ -30,13 +30,52 @@ const ProductFeature = () => {
 const ProductFeatureItem = ({
   section,
 }: {
-  section: { id: number; label: string; content: React.ReactNode };
+  section: {
+    id: number;
+    label: string;
+    content: React.ReactNode;
+    anchorId?: string;
+  };
 }) => {
   const [isExpanded, setIsExpanded] = useState(false);
   const contentId = `product-feature-content-${section.id}`;
+  const anchorId = section.anchorId;
+
+  useEffect(() => {
+    if (!anchorId) {
+      return;
+    }
+
+    const handleHashChange = () => {
+      if (window.location.hash === `#${anchorId}`) {
+        setIsExpanded(true);
+      }
+    };
+
+    handleHashChange();
+    window.addEventListener('hashchange', handleHashChange);
+    return () => window.removeEventListener('hashchange', handleHashChange);
+  }, [anchorId]);
+
+  useEffect(() => {
+    if (!anchorId) {
+      return;
+    }
+
+    const handleOpenEvent = (event: Event) => {
+      const customEvent = event as CustomEvent<{ anchorId?: string }>;
+      if (customEvent.detail?.anchorId === anchorId) {
+        setIsExpanded(true);
+      }
+    };
+
+    window.addEventListener('product-feature:open', handleOpenEvent);
+    return () =>
+      window.removeEventListener('product-feature:open', handleOpenEvent);
+  }, [anchorId]);
 
   return (
-    <>
+    <div id={anchorId} className={anchorId ? 'scroll-mt-28' : undefined}>
       <button
         className="flex w-full cursor-pointer items-center justify-between border-t-2 border-[#e9e9e9] py-5.5"
         onClick={() => setIsExpanded(!isExpanded)}
@@ -68,7 +107,7 @@ const ProductFeatureItem = ({
           <div className="pb-7.5">{section.content}</div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
