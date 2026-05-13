@@ -1,4 +1,5 @@
 import Camera from './camera';
+import GalaxyAI from './galaxy-ai';
 import WeightDimension from './weight-dimension';
 
 const MainSpec = () => {
@@ -10,6 +11,7 @@ const MainSpec = () => {
       <div className="mt-9.5 md:mt-15.5">
         <WeightDimension />
         <Camera />
+        <GalaxyAI />
       </div>
     </div>
   );
