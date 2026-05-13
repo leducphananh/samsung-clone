@@ -187,3 +187,33 @@ export const screenSpecs: {
     },
   },
 ];
+
+export const batterySpecs: {
+  id: number;
+  value: string;
+  desc: string;
+  highlightValue: boolean;
+  highlightDesc: boolean;
+}[] = [
+  {
+    id: 1,
+    value: '5000 mAh',
+    desc: 'Phát lại video lên đến 31 giờ',
+    highlightValue: true,
+    highlightDesc: true,
+  },
+  {
+    id: 2,
+    value: '4900 mAh',
+    desc: 'Phát lại video lên đến 31 giờ',
+    highlightValue: false,
+    highlightDesc: true,
+  },
+  {
+    id: 3,
+    value: '4300 mAh',
+    desc: 'Phát lại video lên đến 30 giờ',
+    highlightValue: false,
+    highlightDesc: false,
+  },
+];
