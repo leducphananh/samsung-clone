@@ -5,6 +5,9 @@ import { useState } from 'react';
 import { default as AllBattery } from './all/battery';
 import { default as AllCamera } from './all/camera';
 import { default as AllGalaxyAI } from './all/galaxy-ai';
+import { default as AllProcessor } from './all/processor';
+import { default as AllScreen } from './all/screen';
+import { default as AllStorage } from './all/storage';
 import { default as AllWeightDimension } from './all/weight-dimension';
 import Battery from './main/batery';
 import Camera from './main/camera';
@@ -59,6 +62,9 @@ const MainSpec = () => {
           <AllCamera />
           <AllGalaxyAI />
           <AllBattery />
+          <AllProcessor />
+          <AllScreen />
+          <AllStorage />
         </div>
       </div>
     </div>

@@ -1,4 +1,4 @@
-import { screenSpecs } from '@/app/constants/all-spec.constant';
+import { cameraSpecs } from '@/app/constants/all-spec.constant';
 import clsx from 'clsx';
 import SpecItem from './spec-item';
 
@@ -12,7 +12,7 @@ const Camera = () => {
         </h3>
       </div>
       <ul className="flex justify-between gap-7 md:gap-16">
-        {screenSpecs.map((item, index) => (
+        {cameraSpecs.map((item, index) => (
           <li
             key={item.id}
             className={clsx(

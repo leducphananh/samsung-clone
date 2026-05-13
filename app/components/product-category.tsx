@@ -78,7 +78,7 @@ const ProductCategory = () => {
                       </h3>
                       <div className="px-4">
                         <Link
-                          href={`/smartphones/${product.title}`}
+                          href={'/smartphones/galaxy-s26-ultra'}
                           className="flex items-center justify-center">
                           <Image
                             width={200}

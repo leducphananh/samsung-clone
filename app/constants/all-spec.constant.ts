@@ -71,7 +71,7 @@ export const screenWeights: {
   },
 ];
 
-export const screenSpecs: {
+export const cameraSpecs: {
   id: number;
   rearWide: {
     label: string;
@@ -217,3 +217,117 @@ export const batterySpecs: {
     highlightDesc: false,
   },
 ];
+
+export const processorSpecs: {
+  id: number;
+  value: string;
+  desc: string;
+}[] = [
+  {
+    id: 1,
+    value: 'Snapdragon® 8 Elite Gen 5 cho Galaxy',
+    desc: 'Octa-Core',
+  },
+  {
+    id: 2,
+    value: 'Exynos 2600 được tùy chỉnh cho Galaxy',
+    desc: 'Deca-Core',
+  },
+  {
+    id: 3,
+    value: 'Exynos 2600 được tùy chỉnh cho Galaxy',
+    desc: 'Deca-Core',
+  },
+];
+
+export const screenSpecs: {
+  id: number;
+  resolution: {
+    label: string;
+    value: string;
+    desc: string;
+    imgSrc: string;
+  };
+  highestBrightness: {
+    label: string;
+    value: string;
+  };
+  refreshRate: {
+    label: string;
+    value: string;
+  };
+}[] = [
+  {
+    id: 1,
+    resolution: {
+      label: 'Độ phân giải màn hình chính',
+      value: '3120 x 1440',
+      desc: 'Công nghệ màn hình QHD+ Dynamic AMOLED 2X',
+      imgSrc:
+        'https://images.samsung.com/common/smartphones/compare/galaxy-s26/images/display-material-general-phone.svg',
+    },
+    highestBrightness: {
+      label: 'Độ sáng cao nhất',
+      value: '2600 nits',
+    },
+    refreshRate: {
+      label: 'Tốc độ làm mới thích ứng',
+      value: '1~120 Hz',
+    },
+  },
+  {
+    id: 2,
+    resolution: {
+      label: 'Độ phân giải màn hình chính',
+      value: '3120 x 1440',
+      desc: 'Công nghệ màn hình QHD+ Dynamic AMOLED 2X',
+      imgSrc:
+        'https://images.samsung.com/common/smartphones/compare/galaxy-s26/images/display-material-general-phone.svg',
+    },
+    highestBrightness: {
+      label: 'Độ sáng cao nhất',
+      value: '2600 nits',
+    },
+    refreshRate: {
+      label: 'Tốc độ làm mới thích ứng',
+      value: '1~120 Hz',
+    },
+  },
+  {
+    id: 3,
+    resolution: {
+      label: 'Độ phân giải màn hình chính',
+      value: '2340 x 1080',
+      desc: 'FHD+ Dynamic AMOLED 2X',
+      imgSrc:
+        'https://images.samsung.com/common/smartphones/compare/galaxy-s26/images/display-material-general-phone.svg',
+    },
+    highestBrightness: {
+      label: 'Độ sáng cao nhất',
+      value: '2600 nits',
+    },
+    refreshRate: {
+      label: 'Tốc độ làm mới thích ứng',
+      value: '1~120 Hz',
+    },
+  },
+];
+
+export const storageSpecs: { id: number; storage: string[]; ram: string[] }[] =
+  [
+    {
+      id: 1,
+      storage: ['-', '256 GB', '512 GB', '1 TB'],
+      ram: ['-', '-', '12 GB', '16 GB'],
+    },
+    {
+      id: 1,
+      storage: ['-', '256 GB', '512 GB', '-'],
+      ram: ['-', '-', '12 GB', '-'],
+    },
+    {
+      id: 1,
+      storage: ['-', '256 GB', '512 GB', '-'],
+      ram: ['-', '-', '12 GB', '-'],
+    },
+  ];
