@@ -1,4 +1,6 @@
 import { ChevronDown } from 'lucide-react';
+import { default as AllCamera } from './all/camera';
+import { default as AllGalaxyAI } from './all/galaxy-ai';
 import { default as AllWeightDimension } from './all/weight-dimension';
 import Battery from './main/batery';
 import Camera from './main/camera';
@@ -32,6 +34,8 @@ const MainSpec = () => {
           Tất cả thông số kỹ thuật
         </h2>
         <AllWeightDimension />
+        <AllCamera />
+        <AllGalaxyAI />
       </div>
     </div>
   );

@@ -5,12 +5,14 @@ const SpecItem = ({
   imgSrc,
   label,
   value,
+  highlight,
   className,
   valueClassName,
 }: {
   imgSrc?: string;
   label: string;
   value: string;
+  highlight?: boolean;
   className?: string;
   valueClassName?: string;
 }) => {
@@ -31,6 +33,7 @@ const SpecItem = ({
       <p
         className={clsx(
           'mt-2.25 text-[16px] font-bold md:mt-3 md:text-[22px]',
+          highlight && 'text-[#006bea]',
           valueClassName,
         )}>
         {value}

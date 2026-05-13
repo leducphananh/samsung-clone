@@ -23,10 +23,12 @@ const WeightDimension = () => {
               imgSrc={item.screen.imgSrc}
               label={item.screen.label}
               value={item.screen.value}
+              highlight={item.screen.highlight}
             />
             <SpecItem
               label={item.weight.label}
               value={item.weight.value}
+              highlight={item.weight.highlight}
               className="mt-6 md:mt-8.25"
             />
             <SpecItem
