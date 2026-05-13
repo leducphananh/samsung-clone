@@ -1,0 +1,44 @@
+import { screenWeights } from '@/app/constants/all-spec.constant';
+import clsx from 'clsx';
+import SpecItem from './spec-item';
+
+const WeightDimension = () => {
+  return (
+    <>
+      <div className="pb-1 md:pb-3">
+        <h3 className="font-samsung-sharp text-[19px] font-bold md:text-[32px]">
+          Trọng lượng & Kích thước
+          <sup className="top-2.5 align-top text-[11px]">1</sup>
+        </h3>
+      </div>
+      <ul className="flex justify-between gap-7 md:gap-16">
+        {screenWeights.map((item, index) => (
+          <li
+            key={item.id}
+            className={clsx(
+              'flex flex-col items-center border-t border-[#bbb] pt-8 md:pt-10',
+              index >= 2 ? 'hidden w-43 md:block md:w-75' : 'w-43 md:w-75',
+            )}>
+            <SpecItem
+              imgSrc={item.screen.imgSrc}
+              label={item.screen.label}
+              value={item.screen.value}
+            />
+            <SpecItem
+              label={item.weight.label}
+              value={item.weight.value}
+              className="mt-6 md:mt-8.25"
+            />
+            <SpecItem
+              label={item.dimension.label}
+              value={item.dimension.value}
+              className="mt-6 md:mt-8.25"
+            />
+          </li>
+        ))}
+      </ul>
+    </>
+  );
+};
+
+export default WeightDimension;

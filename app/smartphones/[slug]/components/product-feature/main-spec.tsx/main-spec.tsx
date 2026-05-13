@@ -1,9 +1,11 @@
-import Battery from './batery';
-import Camera from './camera';
-import GalaxyAI from './galaxy-ai';
-import Processor from './processor';
-import Screen from './screen';
-import WeightDimension from './weight-dimension';
+import { ChevronDown } from 'lucide-react';
+import { default as AllWeightDimension } from './all/weight-dimension';
+import Battery from './main/batery';
+import Camera from './main/camera';
+import GalaxyAI from './main/galaxy-ai';
+import Processor from './main/processor';
+import Screen from './main/screen';
+import WeightDimension from './main/weight-dimension';
 
 const MainSpec = () => {
   return (
@@ -18,6 +20,18 @@ const MainSpec = () => {
         <Battery />
         <Processor />
         <Screen />
+      </div>
+      <div className="mt-20 flex items-center justify-center">
+        <button className="flex cursor-pointer items-center gap-1 rounded-[100px] border border-black px-5 py-2 text-[14px] font-bold hover:border-[#555] hover:text-[#555]">
+          Xem thêm
+          <ChevronDown size={20} />
+        </button>
+      </div>
+      <div className="mt-31">
+        <h2 className="font-samsung-sharp mb-4.5 text-[32px] font-bold md:mb-16 md:text-[48px]">
+          Tất cả thông số kỹ thuật
+        </h2>
+        <AllWeightDimension />
       </div>
     </div>
   );
