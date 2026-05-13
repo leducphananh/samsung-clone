@@ -1,5 +1,8 @@
+import Battery from './batery';
 import Camera from './camera';
 import GalaxyAI from './galaxy-ai';
+import Processor from './processor';
+import Screen from './screen';
 import WeightDimension from './weight-dimension';
 
 const MainSpec = () => {
@@ -12,6 +15,9 @@ const MainSpec = () => {
         <WeightDimension />
         <Camera />
         <GalaxyAI />
+        <Battery />
+        <Processor />
+        <Screen />
       </div>
     </div>
   );

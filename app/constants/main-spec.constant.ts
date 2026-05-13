@@ -1,4 +1,4 @@
-type ScreenWeight = {
+interface ScreenWeight {
   id: number;
   screen: {
     label: string;
@@ -11,7 +11,7 @@ type ScreenWeight = {
     value: string;
     highlight?: boolean;
   };
-};
+}
 
 export const screenWeights: ScreenWeight[] = [
   {
@@ -61,14 +61,14 @@ export const screenWeights: ScreenWeight[] = [
   },
 ];
 
-type CameraSpecItem = {
+interface CameraSpecItem {
   label: string;
   value: string;
   highlight?: boolean;
   imgSrc?: string;
-};
+}
 
-type CameraSpec = {
+interface CameraSpec {
   id: number;
   rearWide: CameraSpecItem;
   rearUltraWide: CameraSpecItem;
@@ -78,7 +78,7 @@ type CameraSpec = {
     label: string;
     value: string;
   };
-};
+}
 
 export const cameraSpecs: CameraSpec[] = [
   {
@@ -167,5 +167,75 @@ export const cameraSpecs: CameraSpec[] = [
       value:
         'Thu phóng Quang học 3x,\nThu phóng Chất lượng Quang học 2x,\nThu phóng Kỹ thuật số lên đến 30x',
     },
+  },
+];
+
+export const batterySpecs: {
+  id: number;
+  value: string;
+  desc: string;
+  highlightValue: boolean;
+  highlightDesc: boolean;
+}[] = [
+  {
+    id: 1,
+    value: '5000 mAh',
+    desc: 'Phát lại video lên đến 31 giờ',
+    highlightValue: true,
+    highlightDesc: true,
+  },
+  {
+    id: 2,
+    value: '4900 mAh',
+    desc: 'Phát lại video lên đến 31 giờ',
+    highlightValue: false,
+    highlightDesc: true,
+  },
+  {
+    id: 3,
+    value: '4300 mAh',
+    desc: 'Phát lại video lên đến 30 giờ',
+    highlightValue: false,
+    highlightDesc: false,
+  },
+];
+
+export const processorSpecs: {
+  id: number;
+  value: string;
+}[] = [
+  {
+    id: 1,
+    value: 'Snapdragon® 8 Elite Gen 5 cho Galaxy',
+  },
+  {
+    id: 2,
+    value: 'Exynos 2600 được tùy chỉnh cho Galaxy',
+  },
+  {
+    id: 3,
+    value: 'Exynos 2600 được tùy chỉnh cho Galaxy',
+  },
+];
+
+export const screenSpecs: {
+  id: number;
+  value: string;
+  desc: string;
+}[] = [
+  {
+    id: 1,
+    value: '3120 x 1440',
+    desc: 'Công nghệ màn hình QHD+ Dynamic AMOLED 2X',
+  },
+  {
+    id: 2,
+    value: '3120 x 1440',
+    desc: 'Công nghệ màn hình QHD+ Dynamic AMOLED 2X',
+  },
+  {
+    id: 3,
+    value: '2340 x 1080',
+    desc: 'FHD+ Dynamic AMOLED 2X',
   },
 ];
