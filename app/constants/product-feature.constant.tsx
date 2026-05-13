@@ -1,6 +1,7 @@
 import ActualSize from '../smartphones/[slug]/components/product-feature/actual-size';
 import CompareProduct from '../smartphones/[slug]/components/product-feature/compare-product';
 import FAQ from '../smartphones/[slug]/components/product-feature/faq';
+import NewsReview from '../smartphones/[slug]/components/product-feature/news-review';
 import OutstandingFeature from '../smartphones/[slug]/components/product-feature/outstanding-feature';
 
 export const featureSections: {
@@ -33,7 +34,7 @@ export const featureSections: {
   {
     id: 5,
     label: 'Đánh giá Galaxy S26 Series từ báo chí, trang tin',
-    content: <div></div>,
+    content: <NewsReview />,
   },
   {
     id: 6,
