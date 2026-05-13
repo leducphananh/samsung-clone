@@ -81,7 +81,7 @@ const ProductFeatureItem = ({
         onClick={() => setIsExpanded(!isExpanded)}
         aria-expanded={isExpanded}
         aria-controls={contentId}>
-        <h2 className="font-samsung-sharp text-[19px] font-bold md:text-[22px]">
+        <h2 className="font-samsung-sharp text-left text-[19px] font-bold md:text-[22px]">
           {section.label}
         </h2>
         <span
