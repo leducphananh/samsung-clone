@@ -3,6 +3,7 @@ import { compareProducts } from '@/app/constants/product-feature.constant';
 import clsx from 'clsx';
 import Image from 'next/image';
 import { useState } from 'react';
+import MainSpec from './main-spec.tsx/main-spec';
 
 const CompareProduct = () => {
   return (
@@ -11,7 +12,6 @@ const CompareProduct = () => {
         <h2 className="text-center text-[26px] font-bold md:text-[48px]">
           So sánh các dòng điện thoại
         </h2>
-
         <div className="mt-10 flex justify-between md:mt-20">
           {compareProducts.map((product, index) => (
             <ProductCard
@@ -23,6 +23,7 @@ const CompareProduct = () => {
             />
           ))}
         </div>
+        <MainSpec />
       </div>
     </div>
   );
