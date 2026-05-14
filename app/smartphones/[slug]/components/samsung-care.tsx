@@ -7,14 +7,18 @@ import clsx from 'clsx';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
+import SamsungCareModal from './samsung-care-modal';
 
 const SamsungCare = () => {
-  const [selectedOptionId, setSelectedOptionId] = useState(
-    samsungCareOptions[0].id,
-  );
+  const [selectedOptionId, setSelectedOptionId] = useState<string | null>(null);
   const [selectedCareOption, setSelectedCareOption] = useState<number | null>(
     null,
   );
+  const [selectedPaymentOption, setSelectedPaymentOption] = useState<{
+    label: string;
+    price: string;
+  } | null>(null);
+  const [isCareModalOpen, setIsCareModalOpen] = useState(false);
   const selectedOptions =
     samsungCareOptions.find(option => option.id === selectedOptionId)
       ?.options || [];
@@ -99,13 +103,21 @@ const SamsungCare = () => {
               {selectedOptions.map(option => (
                 <li key={option.id}>
                   <button
+                    type="button"
                     className={clsx(
                       'flex h-full w-full cursor-pointer items-center justify-between gap-4 rounded-md border bg-white p-4 md:px-5 md:py-4',
                       selectedCareOption === option.id
                         ? 'border-[#006bea] ring-1 ring-[#2189ff] ring-inset'
                         : 'border-[#ddd] hover:border-[#555]',
                     )}
-                    onClick={() => setSelectedCareOption(option.id)}>
+                    onClick={() => {
+                      setSelectedCareOption(option.id);
+                      setSelectedPaymentOption({
+                        label: option.label,
+                        price: option.price,
+                      });
+                      setIsCareModalOpen(true);
+                    }}>
                     <div className="flex-auto text-left text-[12px] font-bold md:flex-1 md:text-[14px]">
                       {option.label}
                     </div>
@@ -144,6 +156,15 @@ const SamsungCare = () => {
             </li>
           ))}
         </ul>
+
+        <SamsungCareModal
+          isOpen={isCareModalOpen}
+          option={selectedPaymentOption}
+          onClose={() => {
+            setIsCareModalOpen(false);
+            setSelectedOptionId('no-thanks');
+          }}
+        />
       </div>
     </section>
   );
