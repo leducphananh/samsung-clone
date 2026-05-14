@@ -321,12 +321,12 @@ export const storageSpecs: { id: number; storage: string[]; ram: string[] }[] =
       ram: ['-', '-', '12 GB', '16 GB'],
     },
     {
-      id: 1,
+      id: 2,
       storage: ['-', '256 GB', '512 GB', '-'],
       ram: ['-', '-', '12 GB', '-'],
     },
     {
-      id: 1,
+      id: 3,
       storage: ['-', '256 GB', '512 GB', '-'],
       ram: ['-', '-', '12 GB', '-'],
     },

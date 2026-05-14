@@ -7,9 +7,11 @@ import clsx from 'clsx';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
+import TradeInModal from './trade-in-modal/trade-in-modal';
 
 const ProductTrade = () => {
-  const [selectedOptionId, setSelectedOptionId] = useState(tradeOptions[0].id);
+  const [selectedOptionId, setSelectedOptionId] = useState<string | null>(null);
+  const [isTradeInModalOpen, setIsTradeInModalOpen] = useState(false);
 
   return (
     <section className="mx-auto w-full max-w-360 px-4 py-6 md:px-8 md:py-10">
@@ -44,7 +46,13 @@ const ProductTrade = () => {
                       ? 'border-[#006bea] ring-1 ring-[#006bea] ring-inset'
                       : 'border-[#ddd] hover:border-[#555]',
                   )}
-                  onClick={() => setSelectedOptionId(option.id)}>
+                  onClick={() => {
+                    setSelectedOptionId(option.id);
+
+                    if (option.id === 'trade-in') {
+                      setIsTradeInModalOpen(true);
+                    }
+                  }}>
                   <div className="text-[16px] font-bold md:text-[18px]">
                     {option.label}
                   </div>
@@ -103,6 +111,14 @@ const ProductTrade = () => {
             </li>
           ))}
         </ul>
+
+        <TradeInModal
+          isOpen={isTradeInModalOpen}
+          onClose={() => {
+            setIsTradeInModalOpen(false);
+            setSelectedOptionId('no-thanks');
+          }}
+        />
       </div>
     </section>
   );
