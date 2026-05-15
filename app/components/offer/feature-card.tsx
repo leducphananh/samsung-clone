@@ -6,7 +6,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/scrollbar';
 import { Navigation, Scrollbar } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { features } from '../constants/feature.constant';
+import { features } from '../../constants/feature.constant';
 
 const FeatureCard = () => {
   return (

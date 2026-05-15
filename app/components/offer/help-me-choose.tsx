@@ -6,7 +6,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/scrollbar';
 import { Navigation, Scrollbar } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { helpChoose } from '../constants/help-choose.constant';
+import { helpChoose } from '../../constants/help-choose.constant';
 
 const HelpMeChoose = () => {
   return (

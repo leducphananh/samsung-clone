@@ -8,7 +8,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/scrollbar';
 import { Navigation, Scrollbar } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { offers } from '../constants/offer.constant';
+import { offers } from '../../constants/offer.constant';
 
 const OfferCard = () => {
   const [selectedOffer, setSelectedOffer] = useState(offers[0].id);

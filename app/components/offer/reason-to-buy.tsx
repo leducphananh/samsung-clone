@@ -8,7 +8,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/scrollbar';
 import { Navigation, Scrollbar } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { reasons } from '../constants/reason.constant';
+import { reasons } from '../../constants/reason.constant';
 
 const ReasonToBuy = () => {
   const [swiperProgress, setSwiperProgress] = useState(0);
