@@ -1,4 +1,5 @@
 'use client';
+import { formatVnd } from '@/utils/format.util';
 import clsx from 'clsx';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
 import Image from 'next/image';
@@ -10,7 +11,6 @@ import 'swiper/css/navigation';
 import 'swiper/css/scrollbar';
 import { Navigation, Scrollbar } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { formatVnd } from '../../../utils/format.util';
 import { categories } from '../../constants/product.constant';
 
 const ProductCategory = () => {

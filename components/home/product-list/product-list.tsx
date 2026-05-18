@@ -1,6 +1,6 @@
 'use client';
-import { phoneVariants } from '@/app/constants/phone-variant.constant';
-import { productList } from '@/app/constants/product-list.constant';
+import { phoneVariants } from '@/constants/phone-variant.constant';
+import { productList } from '@/constants/product-list.constant';
 import clsx from 'clsx';
 import Link from 'next/link';
 import { useState } from 'react';

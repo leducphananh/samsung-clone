@@ -1,14 +1,14 @@
-import CrossNavigation from './components/cross-navigation';
-import InnerCrossNav from './components/inner-cross-nav';
-import OfferBanner from './components/offer-banner';
-import PriceBar from './components/price-bar';
-import ProductBuying from './components/product-buying/product-buying';
-import ProductFeature from './components/product-feature/product-feature';
-import ProductSummary from './components/product-summary';
-import ProductTrade from './components/product-trade';
-import PromotionCoupon from './components/promotion-coupon';
-import PromotionGift from './components/promotion-gift';
-import SamsungCare from './components/samsung-care';
+import CrossNavigation from './_components/cross-navigation';
+import InnerCrossNav from './_components/inner-cross-nav';
+import OfferBanner from './_components/offer-banner';
+import PriceBar from './_components/price-bar';
+import ProductBuying from './_components/product-buying/product-buying';
+import ProductFeature from './_components/product-feature/product-feature';
+import ProductSummary from './_components/product-summary';
+import ProductTrade from './_components/product-trade';
+import PromotionCoupon from './_components/promotion-coupon';
+import PromotionGift from './_components/promotion-gift';
+import SamsungCare from './_components/samsung-care';
 
 const SmartphoneDetailPage = () => {
   return (

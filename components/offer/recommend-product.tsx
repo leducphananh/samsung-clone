@@ -1,4 +1,5 @@
 'use client';
+import { formatVnd } from '@/utils/format.util';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -9,7 +10,6 @@ import 'swiper/css/navigation';
 import 'swiper/css/scrollbar';
 import { Navigation, Scrollbar } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { formatVnd } from '../../../utils/format.util';
 import { recommendProducts } from '../../constants/recommend.constant';
 
 const RecommendProduct = () => {

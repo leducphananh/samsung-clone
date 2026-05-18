@@ -1,4 +1,4 @@
-import { exploreItems } from '@/app/constants/explore.constant';
+import { exploreItems } from '@/constants/explore.constant';
 import Image from 'next/image';
 import Link from 'next/link';
 
