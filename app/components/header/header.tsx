@@ -42,31 +42,42 @@ const Header = () => {
           {/* Desktop icon actions */}
           <div className="flex items-center gap-1">
             <button
-              className="p-2 text-[#1e1e1e] transition-colors hover:text-[#1428a0]"
+              className="cursor-pointer p-2 text-[#1e1e1e] transition-colors hover:text-[#1428a0]"
               aria-label="Search">
               <Search size={22} />
             </button>
             <button
-              className="p-2 text-[#1e1e1e] transition-colors hover:text-[#1428a0]"
+              className="cursor-pointer p-2 text-[#1e1e1e] transition-colors hover:text-[#1428a0]"
               aria-label="Cart">
               <ShoppingCart size={22} />
             </button>
-            <button
-              className="p-2 text-[#1e1e1e] transition-colors hover:text-[#1428a0]"
+            <Link
+              href="/profile"
+              className="cursor-pointer p-2 text-[#1e1e1e] transition-colors hover:text-[#1428a0]"
               aria-label="Account">
               <UserRound size={22} />
-            </button>
+            </Link>
           </div>
         </div>
 
         {/* Mobile: right-side icons + hamburger */}
         <div className="ml-auto flex items-center gap-1 lg:hidden">
-          <button className="p-2 text-[#1e1e1e]" aria-label="Search">
+          <button
+            className="cursor-pointer p-2 text-[#1e1e1e]"
+            aria-label="Search">
             <Search size={20} />
           </button>
-          <button className="p-2 text-[#1e1e1e]" aria-label="Cart">
+          <button
+            className="cursor-pointer p-2 text-[#1e1e1e]"
+            aria-label="Cart">
             <ShoppingCart size={20} />
           </button>
+          <Link
+            href="/profile"
+            className="cursor-pointer p-2 text-[#1e1e1e]"
+            aria-label="Account">
+            <UserRound size={20} />
+          </Link>
           <button
             className="p-2 text-[#1e1e1e]"
             aria-label={mobileOpen ? 'Close menu' : 'Open menu'}
