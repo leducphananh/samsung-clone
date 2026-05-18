@@ -32,11 +32,11 @@ const Storage = () => {
               <p className="text-[14px] text-[#757575] md:text-[18px]">
                 Lưu trữ
               </p>
-              <p className="text-left text-[16px] font-bold md:mt-3 md:text-[22px]">
+              <div className="text-left text-[16px] font-bold md:mt-3 md:text-[22px]">
                 {item.storage.map((storageOption, idx) => (
                   <div key={idx}>{storageOption}</div>
                 ))}
-              </p>
+              </div>
               <div className="mt-6 mb-2.5 md:mt-8.25 md:mb-5">
                 <Image
                   width={64}
@@ -49,11 +49,11 @@ const Storage = () => {
               <p className="text-[14px] text-[#757575] md:text-[18px]">
                 Bộ nhớ
               </p>
-              <p className="text-left text-[16px] font-bold md:text-[22px]">
+              <div className="text-left text-[16px] font-bold md:text-[22px]">
                 {item.ram.map((ramOption, idx) => (
                   <div key={idx}>{ramOption}</div>
                 ))}
-              </p>
+              </div>
             </div>
           </li>
         ))}
