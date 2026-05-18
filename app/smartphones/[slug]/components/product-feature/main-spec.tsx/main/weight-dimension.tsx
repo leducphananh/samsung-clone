@@ -1,4 +1,4 @@
-import { screenWeights } from '@/app/constants/main-spec.constant';
+import { screenWeights } from '@/constants/main-spec.constant';
 import clsx from 'clsx';
 import SpecItem from './spec-item';
 

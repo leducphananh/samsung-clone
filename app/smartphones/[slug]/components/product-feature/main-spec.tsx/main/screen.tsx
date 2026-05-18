@@ -1,4 +1,4 @@
-import { screenSpecs } from '@/app/constants/main-spec.constant';
+import { screenSpecs } from '@/constants/main-spec.constant';
 import clsx from 'clsx';
 import Image from 'next/image';
 

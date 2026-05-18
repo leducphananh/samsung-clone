@@ -1,5 +1,5 @@
 'use client';
-import { formatVnd } from '@/app/utils/format.util';
+import { formatVnd } from '@/utils/format.util';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';

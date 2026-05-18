@@ -1,5 +1,5 @@
 'use client';
-import { NavItem, navItems } from '@/app/constants/nav.constant';
+import { NavItem, navItems } from '@/constants/nav.constant';
 import clsx from 'clsx';
 import { ChevronDown, Search, ShoppingCart, UserRound, X } from 'lucide-react';
 import Image from 'next/image';

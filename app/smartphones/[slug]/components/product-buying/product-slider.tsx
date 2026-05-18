@@ -1,5 +1,5 @@
 'use client';
-import { deviceVariants } from '@/app/constants/product-buying.constant';
+import { deviceVariants } from '@/constants/product-buying.constant';
 import clsx from 'clsx';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import Image from 'next/image';

@@ -1,5 +1,5 @@
 'use client';
-import { compareProducts } from '@/app/constants/product-feature.constant';
+import { compareProducts } from '@/constants/product-feature.constant';
 import clsx from 'clsx';
 import Image from 'next/image';
 import { useState } from 'react';

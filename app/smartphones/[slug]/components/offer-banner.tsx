@@ -1,5 +1,5 @@
 'use client';
-import { offers } from '@/app/constants/offer-banner.constant';
+import { offers } from '@/constants/offer-banner.constant';
 import clsx from 'clsx';
 import { ChevronDown, MoveUpRight } from 'lucide-react';
 import Image from 'next/image';

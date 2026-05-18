@@ -1,5 +1,5 @@
 'use client';
-import { promotionCoupons } from '@/app/constants/promotion-coupon.constant';
+import { promotionCoupons } from '@/constants/promotion-coupon.constant';
 import clsx from 'clsx';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import Image from 'next/image';

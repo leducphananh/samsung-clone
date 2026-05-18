@@ -1,5 +1,5 @@
 'use client';
-import { faqs } from '@/app/constants/faq.constant';
+import { faqs } from '@/constants/faq.constant';
 import clsx from 'clsx';
 import { ChevronDown } from 'lucide-react';
 import { JSX, useState } from 'react';

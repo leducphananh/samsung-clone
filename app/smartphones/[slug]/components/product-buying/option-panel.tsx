@@ -1,5 +1,5 @@
 'use client';
-import { featureIcons } from '@/app/constants/product-buying.constant';
+import { featureIcons } from '@/constants/product-buying.constant';
 import Image from 'next/image';
 import 'swiper/css';
 import 'swiper/css/navigation';

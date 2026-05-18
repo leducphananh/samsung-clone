@@ -1,4 +1,4 @@
-import { batterySpecs } from '@/app/constants/all-spec.constant';
+import { batterySpecs } from '@/constants/all-spec.constant';
 import clsx from 'clsx';
 import Image from 'next/image';
 

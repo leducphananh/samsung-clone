@@ -1,6 +1,6 @@
+import Header from '@/components/header/header';
 import type { Metadata } from 'next';
 import localFont from 'next/font/local';
-import Header from './components/header/header';
 import './globals.css';
 
 const samsungOneFont = localFont({

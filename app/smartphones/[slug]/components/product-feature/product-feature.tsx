@@ -1,5 +1,5 @@
 'use client';
-import { featureSections } from '@/app/constants/product-feature.constant';
+import { featureSections } from '@/constants/product-feature.constant';
 import clsx from 'clsx';
 import { ChevronDown } from 'lucide-react';
 import { useEffect, useState } from 'react';

@@ -1,5 +1,5 @@
 'use client';
-import { NavItem, navItems } from '@/app/constants/nav.constant';
+import { NavItem, navItems } from '@/constants/nav.constant';
 import clsx from 'clsx';
 import Image from 'next/image';
 import Link from 'next/link';

@@ -1,9 +1,9 @@
 'use client';
-import Modal from '@/app/components/common/modal';
+import Modal from '@/components/common/modal';
 import {
   ColorOption as ColorOptionType,
   deviceVariants,
-} from '@/app/constants/product-buying.constant';
+} from '@/constants/product-buying.constant';
 import clsx from 'clsx';
 import { CircleQuestionMark } from 'lucide-react';
 import Image from 'next/image';

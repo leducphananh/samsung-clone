@@ -1,4 +1,4 @@
-import { ratings } from '@/app/constants/rating.constant';
+import { ratings } from '@/constants/rating.constant';
 import clsx from 'clsx';
 import { Star } from 'lucide-react';
 import { useState } from 'react';

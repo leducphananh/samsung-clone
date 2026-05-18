@@ -1,4 +1,4 @@
-import { processorSpecs } from '@/app/constants/main-spec.constant';
+import { processorSpecs } from '@/constants/main-spec.constant';
 import clsx from 'clsx';
 import Image from 'next/image';
 

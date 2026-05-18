@@ -1,6 +1,5 @@
 'use client';
-
-import Modal from '@/app/components/common/modal';
+import Modal from '@/components/common/modal';
 import clsx from 'clsx';
 import { Check } from 'lucide-react';
 import { useState } from 'react';

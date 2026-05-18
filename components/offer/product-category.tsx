@@ -10,8 +10,8 @@ import 'swiper/css/navigation';
 import 'swiper/css/scrollbar';
 import { Navigation, Scrollbar } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { formatVnd } from '../../../utils/format.util';
 import { categories } from '../../constants/product.constant';
-import { formatVnd } from '../../utils/format.util';
 
 const ProductCategory = () => {
   const [activeCategory, setActiveCategory] = useState(categories[0].id);

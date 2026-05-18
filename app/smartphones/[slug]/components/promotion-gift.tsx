@@ -1,4 +1,4 @@
-import { promotionGifts } from '@/app/constants/promotion-gift.constant';
+import { promotionGifts } from '@/constants/promotion-gift.constant';
 import Image from 'next/image';
 import Link from 'next/link';
 

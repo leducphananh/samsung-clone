@@ -1,5 +1,5 @@
 'use client';
-import { outstandingFeatures } from '@/app/constants/product-feature.constant';
+import { outstandingFeatures } from '@/constants/product-feature.constant';
 import clsx from 'clsx';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import Image from 'next/image';

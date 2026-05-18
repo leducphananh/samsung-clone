@@ -1,4 +1,4 @@
-import { newsReviews } from '@/app/constants/news-review.constant';
+import { newsReviews } from '@/constants/news-review.constant';
 import clsx from 'clsx';
 import Image from 'next/image';
 import Link from 'next/link';

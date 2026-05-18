@@ -2,7 +2,7 @@
 import {
   tradeInfoCards,
   tradeOptions,
-} from '@/app/constants/product-trade.constant';
+} from '@/constants/product-trade.constant';
 import clsx from 'clsx';
 import Image from 'next/image';
 import Link from 'next/link';

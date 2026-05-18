@@ -1,4 +1,4 @@
-import { cameraSpecs } from '@/app/constants/main-spec.constant';
+import { cameraSpecs } from '@/constants/main-spec.constant';
 import clsx from 'clsx';
 import SpecItem from './spec-item';
 

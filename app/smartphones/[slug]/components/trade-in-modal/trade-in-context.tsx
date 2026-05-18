@@ -7,8 +7,8 @@ import {
   samsungTabletTradeInDevices,
   samsungTradeInDevices,
   samsungWatchTradeInDevices,
-} from '@/app/constants/trade-in-device.constant';
-import { getDeviceCapacity } from '@/app/utils/device-capacity.util';
+} from '@/constants/trade-in-device.constant';
+import { getDeviceCapacity } from '@/utils/device-capacity.util';
 import { ReactNode, createContext, useContext, useMemo, useState } from 'react';
 
 const brands = [

@@ -9,8 +9,8 @@ import 'swiper/css/navigation';
 import 'swiper/css/scrollbar';
 import { Navigation, Scrollbar } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { formatVnd } from '../../../utils/format.util';
 import { recommendProducts } from '../../constants/recommend.constant';
-import { formatVnd } from '../../utils/format.util';
 
 const RecommendProduct = () => {
   const [swiperProgress, setSwiperProgress] = useState(0);

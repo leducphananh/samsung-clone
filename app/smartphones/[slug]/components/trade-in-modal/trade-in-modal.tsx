@@ -1,6 +1,6 @@
 'use client';
 
-import Modal from '@/app/components/common/modal';
+import Modal from '@/components/common/modal';
 import clsx from 'clsx';
 import { useState } from 'react';
 import FinalStep from './final-step';

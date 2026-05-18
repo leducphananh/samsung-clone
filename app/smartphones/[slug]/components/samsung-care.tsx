@@ -2,7 +2,7 @@
 import {
   careInfoCards,
   samsungCareOptions,
-} from '@/app/constants/samsung-care.constant';
+} from '@/constants/samsung-care.constant';
 import clsx from 'clsx';
 import Image from 'next/image';
 import Link from 'next/link';
