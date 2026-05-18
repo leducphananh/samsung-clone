@@ -46,11 +46,12 @@ const Header = () => {
               aria-label="Search">
               <Search size={22} />
             </button>
-            <button
+            <Link
+              href="/cart"
               className="cursor-pointer p-2 text-[#1e1e1e] transition-colors hover:text-[#1428a0]"
               aria-label="Cart">
               <ShoppingCart size={22} />
-            </button>
+            </Link>
             <Link
               href="/profile"
               className="cursor-pointer p-2 text-[#1e1e1e] transition-colors hover:text-[#1428a0]"
@@ -67,11 +68,12 @@ const Header = () => {
             aria-label="Search">
             <Search size={20} />
           </button>
-          <button
+          <Link
+            href="/cart"
             className="cursor-pointer p-2 text-[#1e1e1e]"
             aria-label="Cart">
             <ShoppingCart size={20} />
-          </button>
+          </Link>
           <Link
             href="/profile"
             className="cursor-pointer p-2 text-[#1e1e1e]"
