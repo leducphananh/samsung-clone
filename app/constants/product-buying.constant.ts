@@ -153,7 +153,7 @@ export const deviceVariants: Array<{
             alt: 'Galaxy S26 Ultra (Samsung.com only) DeviceBackL30 Silver Shadow ',
           },
           {
-            src: '//images.samsung.com/is/image/samsung/p6pim/vn/s2602/gallery/vn-galaxy-s26-ultra-s948-sm-s948bzscxxv-thumb-550803768?imbypass=true',
+            src: 'https://images.samsung.com/is/image/samsung/p6pim/vn/s2602/gallery/vn-galaxy-s26-ultra-s948-sm-s948bzscxxv-thumb-550803768?imbypass=true',
             alt: 'Galaxy S26 Ultra (Samsung.com only) DeviceBackL30 Silver Shadow ',
           },
         ],
